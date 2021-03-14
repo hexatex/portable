@@ -1,0 +1,17 @@
+use \Redis\Driver as Redis
+use \PortBlogger\Models\Post
+
+Tag Model
+    database Redis
+
+    public {
+        string code db get set
+        string name db get set
+        string tag_count db get set
+        string url
+            get config('storefront-url') . "tag/{string:this.code}"
+    }
+
+    relationships
+        Taggable[] taggables
+            morphedByMany (Product, Post) Taggable.type

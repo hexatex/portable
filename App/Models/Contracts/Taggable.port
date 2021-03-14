@@ -1,0 +1,6 @@
+use Models/Tag
+
+Taggable
+    relationships
+        Tag[] tags
+            morphToMany this.type

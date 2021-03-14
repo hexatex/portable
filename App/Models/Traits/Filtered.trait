@@ -1,4 +1,4 @@
-use Dtos/Filters
+use Requests/Filters
 
 Filtered
     scopes {

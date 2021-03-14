@@ -8,3 +8,5 @@ namespaces
 
 packages
     3rdPartyPackage git@github.com:hexatex/portable-package.git
+    Redis git@github.com:redis/not-a-real-repo.git
+    Blogger git@github.com:hexatex/port-blogger.git
