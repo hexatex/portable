@@ -1,4 +1,4 @@
-use Example\Models\Contracts\Sellable
+use Models\Contracts\Sellable
 
 LineItem Model
     public

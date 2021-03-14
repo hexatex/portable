@@ -1,6 +1,6 @@
-use Example/Models/Contracts/LineItemable
-use Example/Models/Traits/Filtered
-use Example/Models/Traits/IsLineItemable
+use Models/Contracts/LineItemable
+use Models/Traits/Filtered
+use Models/Traits/IsLineItemable
 
 WishList Model : LineItemable
     Filtered, IsLineItemable

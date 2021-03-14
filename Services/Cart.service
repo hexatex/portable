@@ -1,12 +1,12 @@
-use Example/Dtos/Filters
-use Example/Models/Cart
+use Dtos/Filters
+use Models/Cart
 
 services
     LineItem
 
 public
-    Cart get(int $id) {
-        Cart cart = Cart::find($id)
+    Cart get(int id) {
+        Cart cart = Cart::find(id)
 
         return cart
     }

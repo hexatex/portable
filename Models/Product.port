@@ -1,5 +1,7 @@
+use \3rdPartyPackage\Searchable
+
 Product Model : Sellable
-    IsSellable
+    IsSellable, Searchable
 
     relationships
         ProductVariant[] productVariants

@@ -1,0 +1,3 @@
+namespaces
+    Example ./Example
+    3rdPartyPackage git@github.com:hexatex/portable-package.git

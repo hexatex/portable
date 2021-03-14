@@ -1,4 +1,4 @@
-use Example/Models/Contracts/LineItemable
+use Models/Contracts/LineItemable
 
 IsLineItemable
     abstract
