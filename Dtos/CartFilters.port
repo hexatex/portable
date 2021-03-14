@@ -1,0 +1,3 @@
+FiltersDto
+    public
+        string[string] filters get set

@@ -1,0 +1,4 @@
+LineItemable
+    relationships
+        LineItem[] lineItems
+            morphMany LineItem

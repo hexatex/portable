@@ -1,0 +1,7 @@
+LineItem Model
+    public
+        int qty db get set
+
+    relationships
+        LineItemable lineItemable
+            morphTo

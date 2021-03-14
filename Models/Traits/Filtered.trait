@@ -1,0 +1,9 @@
+use Example/Dtos/FiltersDto
+
+Filtered
+    scopes
+        filter(FiltersDto filters_dto) {
+            foreach string column, filter of filters_dto.filters {
+                query.where(column, 'like', filter)
+            }
+        }

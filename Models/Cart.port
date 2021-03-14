@@ -1,0 +1,59 @@
+use Example/Models/Contracts/LineItemable
+use Example/Models/Traits/Filtered
+use Example/Models/Traits/IsLineItemable
+
+Cart Model : LineItemable
+    Filtered
+    IsLineItemable
+        total as sub_total
+
+    public
+        bool delivery_notification db get set
+        bool tax_exempt db get set
+        float amount_tax db set
+            get {
+                if private.amount_tax {
+                    return private.amount_tax
+                }
+
+                amount_tax = 0 // If name is the same as the accessor, assume type
+                foreach lineItem of this.lineItems {
+                    amount_tax += lineItem.total * this.taxRate.rate
+                }
+
+                return round(amount_tax, 2)
+            }
+        float total db set
+            get {
+                if private.total {
+                    return private.total
+                }
+
+                return this.amount_tax + this.sub_total
+            }
+    private
+        bool has_private_accessor
+            get {
+                return true
+            }
+
+    public methods
+        doSomething() {
+            this.doSomethingLocally()
+        }
+
+    scopes
+        byOrderedAt(datetime orderedAt) {
+            query.where('ordered_at', orderAt.date())
+        }
+
+    relationships
+        Address billingAddress
+            belongsTo billing_address_id
+        Address shippingAddress
+            belongsTo shipping_address_id
+
+    private methods
+        doSomethingLocally() {
+            // Todo: implement
+        }
