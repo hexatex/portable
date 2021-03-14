@@ -3,7 +3,7 @@ use Dtos/Filters
 Filtered
     scopes
         filter(Filters filters) {
-            foreach string column, where of filters.wheres {
-                query.where(column, 'like', where)
+            foreach (KeyValue where of filters.wheres) {
+                query.where(where.key, 'like', where.value)
             }
         }

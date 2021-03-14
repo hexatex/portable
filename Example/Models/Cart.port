@@ -12,12 +12,16 @@ Cart Model : LineItemable
         bool tax_exempt db get set
         float amount_tax db set
             get {
+                if this.tax_exempt {
+                    return 0;
+                }
+
                 if private.amount_tax {
                     return private.amount_tax
                 }
 
                 amount_tax = 0 // If name is the same as the accessor, assume type
-                foreach lineItem of this.lineItems {
+                foreach LineItem lineItem of this.lineItems {
                     amount_tax += lineItem.total * this.taxRate.rate
                 }
 
