@@ -8,7 +8,7 @@ Cart Model : LineItemable
         total as sub_total
 
     + LineItemable
-    public
+    public {
         float total db set
             dependants lineItems // Will prevent auto loading by transformers
             get {
@@ -18,9 +18,10 @@ Cart Model : LineItemable
 
                 return this.amount_tax + this.sub_total
             }
+    }
     - LineItemable
 
-    public
+    public {
         bool delivery_notification db get set
         bool tax_exempt db get set
         float amount_tax db set
@@ -40,28 +41,34 @@ Cart Model : LineItemable
 
                 return round(amount_tax, 2)
             }
+    }
 
-    private
+    private {
         bool has_private_accessor
             get true
+    }
 
-    public methods
+    public methods {
         doSomething() {
             this.doSomethingLocally()
         }
+    }
 
-    scopes
+    scopes {
         byOrderedAt(datetime orderedAt) {
             query.where('ordered_at', orderAt.date())
         }
+    }
 
-    relationships
+    relationships {
         Address billingAddress
             belongsTo billing_address_id
         Address shippingAddress
             belongsTo shipping_address_id
+    }
 
-    private methods
+    private methods {
         doSomethingLocally() {
             // Todo: implement
         }
+    }

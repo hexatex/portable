@@ -1,5 +1,6 @@
 IsSellable
-    public
+    public {
         string name db get set
         float price db get set
         string color db get set
+    }

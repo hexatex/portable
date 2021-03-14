@@ -1,19 +1,24 @@
 use Models/Contracts/LineItemable
 
 IsLineItemable
-    abstract
+    abstract {
         LineItemable.lineItems
+    }
 
-    public
+    public {
         float total db set
             get private.total ?: this.lineItems.sum('total')
-    scopes
+    }
+
+    scopes {
         byAuthor(Author author) {
             query.where(this.author, author)
         }
+    }
 
-    relationships
+    relationships {
         Author author
             morphTo
         LineItem[] lineItems
             LineItemable.morphMany orderBy('created_at', 'desc')
+    }

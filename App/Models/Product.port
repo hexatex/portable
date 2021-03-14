@@ -3,16 +3,18 @@ use /3rdPartyPackage/Traits/HasSlug
 Product Model : Sellable
     IsSellable, HasSlug
 
-    public
+    public {
         string url
             get config('storefront-url') . this.slug
+    }
 
-    relationships
+    relationships {
         ProductVariant[] productVariants
             hasMany
+    }
 
     + Searchable
-    public
+    public {
         json searchable_array
             get {
                 return json {
@@ -21,4 +23,5 @@ Product Model : Sellable
                     variants: this.productVariants.mapJson(ProductVariant variant => variant.searchable_array),
                 }
             }
+    }
     - Searchable

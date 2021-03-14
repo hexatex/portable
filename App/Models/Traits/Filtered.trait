@@ -1,9 +1,10 @@
 use Dtos/Filters
 
 Filtered
-    scopes
+    scopes {
         filter(Filters filters) {
             foreach (KeyValue where of filters.wheres) {
                 query.where(where.key, 'like', where.value)
             }
         }
+    }

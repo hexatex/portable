@@ -1,4 +1,5 @@
 LineItemable
-    relationships
+    relationships {
         LineItem[] lineItems
             morphMany LineItem
+    }

@@ -6,7 +6,7 @@ ProductVariant Model : Sellable
             belongsTo
 
     + Searchable
-    public
+    public {
         json searchable_array
             get {
                 return json {
@@ -14,6 +14,7 @@ ProductVariant Model : Sellable
                     color: this.color,
                 }
             }
+    }
     - Searchable
 
     // After + ContractName, the ide could suggest each accessor, method etc defined on the interface as they fill out

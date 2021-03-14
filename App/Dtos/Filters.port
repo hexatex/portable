@@ -1,3 +1,4 @@
 Filters
-    public
+    public {
         string[string] wheres get set
+    }

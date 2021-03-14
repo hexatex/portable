@@ -1,11 +1,13 @@
 use Models\Contracts\Sellable
 
 LineItem Model
-    public
+    public {
         int qty db get set
+    }
 
-    relationships
+    relationships {
         LineItemable lineItemable
             morphTo
         Sellable sellable
             morphOne
+    }
