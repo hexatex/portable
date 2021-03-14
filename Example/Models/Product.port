@@ -1,8 +1,19 @@
-use \3rdPartyPackage\Searchable
-
 Product Model : Sellable
-    IsSellable, Searchable
+    IsSellable
 
     relationships
         ProductVariant[] productVariants
             hasMany
+
+    /*
+     * Searchable
+     */
+     public
+        json getSearchableArray db
+            get {
+                return {
+                    name: this.name,
+                    color: this.color,
+                    variants: this.productVariants.each(variant => variant.getSearchableArray()),
+                }
+            }

@@ -1,4 +1,7 @@
-Sellable
+use \3rdPartyPackage\Contracts\Searchable
+
+Sellable Searchable
     public
         string name get set
         float price get set
+        string color get set
