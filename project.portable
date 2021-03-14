@@ -1,3 +1,10 @@
+details
+    @name Portable Example
+    @description A minimalistic sudo programming language.
+    @repository https://github.com/hexatex/portable
+
 namespaces
-    Example ./Example
+    Example ./App
+
+packages
     3rdPartyPackage git@github.com:hexatex/portable-package.git
