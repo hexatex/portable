@@ -11,7 +11,7 @@ ProductVariant Model : Sellable
      public
         json getSearchableArray db
             get {
-                return {
+                return json {
                     name: this.name,
                     color: this.color,
                 }
