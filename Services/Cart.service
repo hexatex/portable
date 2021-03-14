@@ -1,4 +1,5 @@
-use Dtos/Filters
+use Example/Dtos/Filters
+use Example/Models/Cart
 
 services
     LineItem
