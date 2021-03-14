@@ -1,0 +1,17 @@
+use Dtos/Filters
+
+services
+    LineItem
+
+public
+    Cart get(int $id) {
+        Cart cart = Cart::find($id)
+
+        return cart
+    }
+
+    Cart[string] index(Filters filters) {
+        Cart[string] carts = Cart.filter(filters).get()
+
+        return carts
+    }
