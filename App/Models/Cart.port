@@ -8,6 +8,7 @@ Cart Model : LineItemable
         total as sub_total
 
     + LineItemable
+    public
         float total db set
             dependants lineItems // Will prevent auto loading by transformers
             get {
