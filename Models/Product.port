@@ -1,0 +1,6 @@
+Product Model : Sellable
+    IsSellable
+
+    relationships
+        ProductVariant[] productVariants
+            hasMany

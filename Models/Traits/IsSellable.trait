@@ -1,0 +1,4 @@
+IsSellable
+    public
+        string name get set
+        float price get set

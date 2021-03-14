@@ -1,3 +1,5 @@
+use Example\Models\Contracts\Sellable
+
 LineItem Model
     public
         int qty db get set
@@ -5,3 +7,5 @@ LineItem Model
     relationships
         LineItemable lineItemable
             morphTo
+        Sellable sellable
+            morphOne

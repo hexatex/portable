@@ -1,0 +1,6 @@
+ProductVariant Model : Sellable
+    IsSellable
+
+    relationships
+        Product product
+            belongsTo
