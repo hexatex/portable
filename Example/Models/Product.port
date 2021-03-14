@@ -15,7 +15,7 @@ Product Model : Sellable
 
     /* Searchable */
     public
-        json getSearchableArray db
+        json searchable_array
             get {
                 return json {
                     name: this.name,
