@@ -1,4 +1,4 @@
-use \3rdPartyPackage\Contracts\Searchable
+use /3rdPartyPackage/Contracts/Searchable
 
 Sellable Searchable
     public
