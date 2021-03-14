@@ -31,6 +31,7 @@ Cart Model : LineItemable
 
                 return this.amount_tax + this.sub_total
             }
+
     private
         bool has_private_accessor
             get {
