@@ -7,6 +7,18 @@ Cart Model : LineItemable
     IsLineItemable
         total as sub_total
 
+    + LineItemable
+        float total db set
+            dependants lineItems // Will prevent auto loading by transformers
+            get {
+                if private.total {
+                    return private.total
+                }
+
+                return this.amount_tax + this.sub_total
+            }
+    - LineItemable
+
     public
         bool delivery_notification db get set
         bool tax_exempt db get set
@@ -26,15 +38,6 @@ Cart Model : LineItemable
                 }
 
                 return round(amount_tax, 2)
-            }
-        float total db set
-            dependants lineItems // Will prevent auto loading by transformers
-            get {
-                if private.total {
-                    return private.total
-                }
-
-                return this.amount_tax + this.sub_total
             }
 
     private

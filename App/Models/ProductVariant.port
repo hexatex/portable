@@ -17,4 +17,4 @@ ProductVariant Model : Sellable
     - Searchable
 
     // After + ContractName, the ide could suggest each accessor, method etc defined on the interface as they fill out
-    // the section.
+    // the section. (Sellable extends the Searchable contract)

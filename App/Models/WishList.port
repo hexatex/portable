@@ -4,3 +4,6 @@ use Models/Traits/IsLineItemable
 
 WishList Model : LineItemable
     Filtered, IsLineItemable
+
+    public
+        string name db get set
