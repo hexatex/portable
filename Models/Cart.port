@@ -24,6 +24,7 @@ Cart Model : LineItemable
                 return round(amount_tax, 2)
             }
         float total db set
+            dependants lineItems // Will prevent auto loading by transformers
             get {
                 if private.total {
                     return private.total
