@@ -35,9 +35,7 @@ Cart Model : LineItemable
 
     private
         bool has_private_accessor
-            get {
-                return true
-            }
+            get true
 
     public methods
         doSomething() {

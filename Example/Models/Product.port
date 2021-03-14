@@ -3,23 +3,22 @@ use \3rdPartPackage\Traits\HasSlug
 Product Model : Sellable
     IsSellable, HasSlug
 
+    public
+        string url
+            get config('storefront-url') . this.slug
+
     relationships
         ProductVariant[] productVariants
             hasMany
 
-    public
-        string url
-            get {
-                return config('storefront-url') . this.slug
-            }
-
-    /* Searchable */
+    + Searchable
     public
         json searchable_array
             get {
                 return json {
                     name: this.name,
                     color: this.color,
-                    variants: this.productVariants.each(variant => variant.getSearchableArray()),
+                    variants: this.productVariants.mapJson(ProductVariant variant => variant.searchable_array),
                 }
             }
+    - Searchable
