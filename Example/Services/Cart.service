@@ -11,8 +11,8 @@ public
         return cart
     }
 
-    Cart[string] index(Filters filters) {
-        Cart[string] carts = Cart.filter(filters).get()
+    Cart[] index(Filters filters) {
+        Cart[] carts = Cart.filter(filters).get()
 
         return carts
     }
