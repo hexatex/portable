@@ -2,7 +2,7 @@ use Models/Contracts/LineItemable
 use Models/Traits/Filtered
 use Models/Traits/IsLineItemable
 
-Cart Model : LineItemable
+Model : LineItemable
     Filtered
     IsLineItemable
         total as sub_total

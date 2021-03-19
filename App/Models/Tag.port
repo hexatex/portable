@@ -1,8 +1,8 @@
 use \Redis\Driver as Redis
 use \PortBlogger\Models\Post
 
-Tag Model
-    database Redis
+Model
+    database Redis // This needs to be a configurable connection, Driver is in the wrong place
 
     public {
         string code db get set

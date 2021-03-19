@@ -1,6 +1,6 @@
 use Models\Contracts\Sellable
 
-LineItem Model
+Model
     public {
         int qty db get set
     }

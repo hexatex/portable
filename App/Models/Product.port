@@ -1,6 +1,6 @@
 use /3rdPartyPackage/Traits/HasSlug
 
-Product Model : Sellable
+Model : Sellable
     IsSellable, HasSlug
 
     public {

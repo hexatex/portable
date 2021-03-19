@@ -1,6 +1,5 @@
 use Models/Tag
 
-Taggable
-    relationships
-        Tag[] tags
-            morphToMany this.type
+relationships
+    Tag[] tags
+        morphToMany this.type

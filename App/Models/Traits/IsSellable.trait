@@ -1,6 +1,5 @@
-IsSellable
-    public {
-        string name db get set
-        float price db get set
-        string color db get set
-    }
+public {
+    string name db get set
+    float price db get set
+    string color db get set
+}

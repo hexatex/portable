@@ -1,4 +1,4 @@
-ProductVariant Model : Sellable
+Model : Sellable
     IsSellable
 
     relationships

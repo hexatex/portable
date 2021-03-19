@@ -2,7 +2,7 @@ use Models/Contracts/LineItemable
 use Models/Traits/Filtered
 use Models/Traits/IsLineItemable
 
-WishList Model : LineItemable
+Model : LineItemable
     Filtered, IsLineItemable
 
     public {

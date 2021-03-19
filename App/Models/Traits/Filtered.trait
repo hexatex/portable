@@ -1,10 +1,9 @@
 use Requests/Filters
 
-Filtered
-    scopes {
-        filter(Filters filters) {
-            foreach (KeyValue where of filters.wheres) {
-                query.where(where.key, 'like', where.value)
-            }
+scopes {
+    filter(Filters filters) {
+        foreach (KeyValue where of filters.wheres) {
+            query.where(where.key, 'like', where.value)
         }
     }
+}

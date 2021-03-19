@@ -2,7 +2,7 @@ use Requests/Filters
 use Models/Cart
 
 services
-    LineItem
+    LineItem // There should be a build in method for avoiding circular dependencies
 
 public {
     Cart get(int id) {
